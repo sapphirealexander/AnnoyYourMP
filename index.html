@@ -15,6 +15,7 @@ As a community, our collective power has the capacity to mobilise for change in 
 <hr>
 <h2> Step 1: Find your MP  </h2> 
 <p> Use these quick links to find your local government representative</p>
+<div id="MP-shortlist">
 <a href="https://www.ttparliament.org/members/member/devesh-maharaj/contact-information/"><button> Aranguez / St. Joseph </button></a>
 <a href="https://www.ttparliament.org/members/member/pennelope-beckles-robinson/contact-information/"><button> Arima </button></a>
 <a href="https://www.ttparliament.org/members/member/marvin-gonzales/contact-information/"><button> Arouca/ Lopinot </button></a>
@@ -23,6 +24,8 @@ As a community, our collective power has the capacity to mobilise for change in 
 <a href="https://www.ttparliament.org/members/member/dr-rishad-seecheran/contact-information/"><button> Caroni East  </button></a>
 <a href="https://www.ttparliament.org/members/member/vandana-mohit/contact-information/"><button> Chaguanas East  </button></a>
 <a href="https://www.ttparliament.org/members/member/colin-neil-gosine/contact-information/"><button> Chaguanas West  </button></a>
+</div>
+<div id = "MP-remaining-list">
 <a href="https://www.ttparliament.org/members/member/hansen-narinesingh/contact-information/"><button> Claxton Bay </button></a>
 <a href="https://www.ttparliament.org/members/member/jearlean-john/contact-information/"><button> Couva North  </button></a>
 <a href="https://www.ttparliament.org/members/member/barry-padarath/contact-information/"><button> Couva South </button></a>
@@ -56,6 +59,8 @@ As a community, our collective power has the capacity to mobilise for change in 
 <a href="https://www.ttparliament.org/members/member/wayne-sturge/contact-information/"><button> Toco/ San Grande </button></a>
 <a href="https://www.ttparliament.org/members/member/kamla-persad-bissessar/contact-information/"><button> Trincity/ Maloney </button></a>
 <a href = "https://www.ttparliament.org/members/member/roger-alexander/contact-information/"><button> Tunapuna </button></a>
+</div>
+<button id = "HideShowButton" onclick="HideShowFunction()"> View Full List </button>
 <hr>
 <h2> Step 2: Send your email  </h2>
 <h4> Subject Line Examples. Pick one or create your own </h4> 
@@ -78,6 +83,16 @@ As a community, our collective power has the capacity to mobilise for change in 
     <div><button onclick="CopyClassText()">Copy Text</button></div>
 </body>
 <script>
+function HideShowFunction() {
+  var x = document.getElementById("MP-remaining-list");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+	HideShowButton.innerHTML = 'Hide Full List';
+  } else {
+    x.style.display = "none";
+	HideShowButton.innerHTML = 'View Full List';
+  }
+}
 function CopyClassText(){
      //select the element with ID = "CopyMeID", can be a div, p, or a span, possibly others
      var textToCopy = document.getElementById("CopyMeID");
